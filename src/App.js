@@ -62,8 +62,10 @@ function App() {
       </AppContext.Provider>
     </div>
   );
-  
-  function handleLogout() {
+
+  async function handleLogout() {
+    await Auth.signOut();
+    
     userHasAuthenticated(false);
   }  
 }
